@@ -9,10 +9,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 _playerVelocity;
     private bool _groundedPlayer;
     [SerializeField] private float _playerSpeed = 3.0f;
-    private readonly float _gravityValue = -9.81f;
+    private const float GRAVITY_VALUE = -9.81f;
     private Transform _cameraTransform;
-    private Vector3 _lastInteractDirection;
     [SerializeField] private LayerMask _exhibitsLayerMask;
+    private const float INTERACT_DISTANCE = 2f;
     private Exhibit _selectedExhibit;
     public event EventHandler<OnSelectedExhibitChangedEventArgs> OnSelectedExhibitChanged;
     public class OnSelectedExhibitChangedEventArgs : EventArgs
@@ -40,11 +40,8 @@ public class PlayerController : MonoBehaviour
 
     private void HandleInteractions()
     {
-        Vector2 inputVector = GameInput.Instance.GetMovementVectorNormalized();
-        Vector3 moveDirection = new(inputVector.x, 0f, inputVector.y);
-        if (moveDirection != Vector3.zero) _lastInteractDirection = moveDirection;
-        float interactDistance = 2f;
-        if (Physics.Raycast(transform.position, _lastInteractDirection, out RaycastHit rayCastHit, interactDistance, _exhibitsLayerMask))
+        Ray ray = new Ray(_cameraTransform.position, _cameraTransform.forward);
+        if (Physics.Raycast(ray, out RaycastHit rayCastHit, INTERACT_DISTANCE))
         {
             Exhibit exhibit = rayCastHit.transform.GetComponentInParent<Exhibit>();
 
@@ -90,7 +87,7 @@ public class PlayerController : MonoBehaviour
         _controller.Move(_playerSpeed * Time.deltaTime * move);
 
         float deltaTimeMultiplier = GameInput.Instance.IsKeyboardAndMouseActive() ? 1.0f : Time.deltaTime;
-        _playerVelocity.y += _gravityValue * deltaTimeMultiplier;
+        _playerVelocity.y += GRAVITY_VALUE * deltaTimeMultiplier;
         _controller.Move(_playerVelocity * deltaTimeMultiplier);
     }
 }
