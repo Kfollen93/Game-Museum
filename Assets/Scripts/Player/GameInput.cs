@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,6 +18,14 @@ public class GameInput : MonoBehaviour
         _playerInputActions = new PlayerInputActions();
         _playerInputActions.Enable();
     }
+
+    public void Start()
+    {
+        _playerInputActions.Disable();
+    }
+
+    // Connected to welcome button.
+    public void EnablePlayerInput() => _playerInputActions.Enable();
 
     private void OnEnable()
     {
