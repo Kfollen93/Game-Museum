@@ -6,12 +6,12 @@ public class CameraZoom : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera _vCam;
     private const float ZOOM_DEFAULT = 60f;
-    private const float ZOOM_IN = 52f;
+    private const float ZOOM_IN = 47f;
     [SerializeField] private float _zoomSpeed = 5f;
     private bool _isZooming = false;
     private Coroutine _zoomCoroutine;
 
-    private void Start()
+    private void OnEnable()
     {
         GameInput.Instance.OnZoomAction += GameInput_OnZoomAction;
         GameInput.Instance.OnZoomCanceled += GameInput_OnZoomCanceled;
@@ -38,7 +38,7 @@ public class CameraZoom : MonoBehaviour
         {
             _isZooming = false;
             StopCoroutine(_zoomCoroutine);
-            _zoomCoroutine = StartCoroutine(ZoomCoroutine(ZOOM_DEFAULT));
+            _vCam.m_Lens.FieldOfView = ZOOM_DEFAULT;
         }
     }
 
