@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,11 +8,13 @@ public class GameInput : MonoBehaviour
     public event EventHandler OnInteractAction;
     public event EventHandler OnZoomAction;
     public event EventHandler OnZoomCanceled;
+    public event EventHandler OnSettingsAction;
     private PlayerInputActions _playerInputActions;
     private bool _isKeyboardAndMouse = false;
 
     private void Awake()
     {
+        if (Instance != null) Debug.LogError("There is more than one GameInput instance!");
         Instance = this;
         _playerInputActions = new PlayerInputActions();
         _playerInputActions.Enable();
@@ -26,6 +27,8 @@ public class GameInput : MonoBehaviour
 
     // Connected to welcome button.
     public void EnablePlayerInput() => _playerInputActions.Enable();
+    public void DisablePlayerInput(bool disable) => _playerInputActions.Disable();
+
 
     private void OnEnable()
     {
@@ -33,6 +36,12 @@ public class GameInput : MonoBehaviour
         _playerInputActions.Player.Interact.performed += Interact_performed;
         _playerInputActions.Player.Zoom.performed += Zoom_performed;
         _playerInputActions.Player.Zoom.canceled += Zoom_canceled;
+        _playerInputActions.Player.Settings.performed += Settings_performed;
+    }
+
+    private void Settings_performed(InputAction.CallbackContext obj)
+    {
+        OnSettingsAction?.Invoke(this, EventArgs.Empty);
     }
 
     private void OnDisable()
@@ -41,6 +50,7 @@ public class GameInput : MonoBehaviour
         _playerInputActions.Player.Interact.performed -= Interact_performed;
         _playerInputActions.Player.Zoom.performed -= Zoom_performed;
         _playerInputActions.Player.Zoom.canceled -= Zoom_canceled;
+        _playerInputActions.Player.Settings.performed -= Settings_performed;
     }
 
     private void Zoom_performed(InputAction.CallbackContext obj)
