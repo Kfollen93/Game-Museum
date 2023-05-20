@@ -43,7 +43,7 @@ public class ExhibitInformationUI : MonoBehaviour
     private void SetExhibitInformation(PlayerController.OnSelectedExhibitChangedEventArgs e)
     {
         ExhibitSO exhibitSO = e._selectedExhibitEventArg.GetExhibitSO();
-        _nameOfConsole.text = exhibitSO.name;
+        _nameOfConsole.text = exhibitSO.NameOfConsole;
         _description.text = exhibitSO.Description;
         _manufacturer.text = exhibitSO.Manufacturer;
         _releaseDate.text = exhibitSO.DateReleased;
