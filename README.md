@@ -11,7 +11,7 @@ You can download the game from my Itch.io page here: <a href="https://kfollen.it
 Game Museum Inspector contains exhibits of various game consoles where you can zoom in and inspect the 3d models, along with interacting with the exhibit to learn about the specific console.
 
 ## Development
-This was less of a "game" but more of a project for myself to solidify my understanding of events and relying less on some poor habits such as using the `Update` loop to constantly poll for input/interactions, `FindWithTag`, and so on. This project is uses the new input system and is set up for keyboard/mouse along with controller. The majority of the code is focused around events using `EventHandler` to prompt interact options, and get the Scriptable Object data that's associated with each exhibit. Additionally, I made this project in Unity HDRP and wanted to include graphic settings (specifically implementing Ray Tracing) so that is there as well.<br>
+This was less of a "game" and more of a project for myself to solidify my understanding of events and to rely less on poor habits such as using the `Update` loop to constantly poll for input/interactions, `FindWithTag`, and so on. This project uses the new input system and is set up for keyboard/mouse along with controller. The majority of the code is focused around events using `EventHandler` to prompt interact options, and to get the Scriptable Object data that's associated with each exhibit. Additionally, I made this project in Unity HDRP and wanted to include graphic settings (specifically implementing Ray Tracing) so there are graphic options to choose from Low - Max Ray Tracing.<br>
 
 ## Additional Information
 <ul>
