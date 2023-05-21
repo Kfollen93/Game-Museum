@@ -12,6 +12,7 @@
 Assets/*
 !Assets/Scripts/
 !Assets/ScriptableObjects/
+!/[Ii]mages/
 
 
 # MemoryCaptures can get excessive in size.
