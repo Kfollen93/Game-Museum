@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: PS5
   m_EditorClassIdentifier: 
   NameOfConsole: Playstation 5
-  DateReleased: tes
-  Description: tes
-  Manufacturer: tes
-  ReleasePrice: tes
+  DateReleased: November 12, 2020 (North America)
+  Description: The PlayStation 5, released in 2020, is the latest gaming console
+    from Sony, offering cutting-edge hardware and advanced features. With improved
+    graphics, faster load times, and a new DualSense controller that enhances immersion
+    through haptic feedback and adaptive triggers, the PlayStation 5 delivers an
+    immersive and next-generation gaming experience.
+  Manufacturer: Sony
+  ReleasePrice: $499

@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151dbeeb3c4393f43b82dd04e9d0b5fa, type: 3}
   m_Name: PS2
   m_EditorClassIdentifier: 
-  PictureOfConsole: {fileID: 21300000, guid: d0a430a82f5f29c4c8ab7ffaa3162576, type: 3}
   NameOfConsole: Playstation 2
-  DateReleased: Testing PS2
-  Description: Testing PS2
-  Manufacturer: Testing PS2
-  ReleasePrice: $499
+  DateReleased: October 26, 2000 (North America)
+  Description: The PlayStation 2, released in 2000, was a gaming console developed
+    by Sony that became the best-selling console of all time. It offered a vast library
+    of games, DVD playback capabilities, and introduced innovative features like
+    the DualShock 2 controller, solidifying its status as an iconic platform in the
+    history of gaming.
+  Manufacturer: Sony
+  ReleasePrice: $299

@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: PS4
   m_EditorClassIdentifier: 
   NameOfConsole: Playstation 4
-  DateReleased: tes
-  Description: tes
-  Manufacturer: tes
-  ReleasePrice: tes
+  DateReleased: November 15, 2013 (North America)
+  Description: The PlayStation 4, launched in 2013, was a highly successful gaming
+    console developed by Sony. It featured powerful hardware, a robust online multiplayer
+    system, and a diverse range of games, solidifying its position as a popular choice
+    among gamers worldwide.
+  Manufacturer: Sony
+  ReleasePrice: $399
