@@ -13,7 +13,7 @@ Game Museum Inspector contains exhibits of various game consoles where you can z
 ## Development
 This was less of a "game" and more of a project for myself to solidify my understanding of events and to rely less on poor habits such as using the `Update` loop to constantly poll for input/interactions, `FindWithTag`, and so on. This project uses the new input system and is set up for keyboard/mouse along with controller. The majority of the code is focused around events using `EventHandler` to prompt interact options. A Raycast is shot from the camera to detect when the interact icon should pop up, and to get the Scriptable Object data that's associated with each exhibit. Additionally, I made this project in Unity HDRP and wanted to include graphic settings (specifically implementing Ray Tracing) so there are graphic options to choose from Low - Max Ray Tracing.<br>
 <br>
-This project took me roughly 3-4 weeks to complete, while working a full time job. I used Trello to plan and track my tasks.
+This project took me approximately 3 weeks to complete while working a full time job. I used Trello to plan and track my tasks.
 <br>
 <img src="https://github.com/Kfollen93/Game-Museum/blob/main/Images/Trello.png" width="960" height="480"/>
 
