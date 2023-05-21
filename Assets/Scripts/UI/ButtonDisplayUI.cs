@@ -12,7 +12,6 @@ public class ButtonDisplayUI : MonoBehaviour
         _button.gameObject.SetActive(false);
     }
 
-
     private void Update()
     {
         timer += Time.deltaTime;
