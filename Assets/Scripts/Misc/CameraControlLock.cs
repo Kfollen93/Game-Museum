@@ -8,8 +8,14 @@ public class CameraControlLock : MonoBehaviour
     private CinemachineInputProvider _provider;
     private void Awake()
     {
-        if (Instance != null) Debug.LogError("There is more than one CameraControlLock instance!");
-        Instance = this;
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
         _provider = _vCam.GetComponent<CinemachineInputProvider>();
     }
 

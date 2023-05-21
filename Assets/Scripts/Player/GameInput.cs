@@ -14,8 +14,14 @@ public class GameInput : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null) Debug.LogError("There is more than one GameInput instance!");
-        Instance = this;
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
         _playerInputActions = new PlayerInputActions();
         _playerInputActions.Enable();
     }
