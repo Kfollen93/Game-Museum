@@ -1,6 +1,6 @@
 # Game Museum Inspector
 
-<img src="x" width="640" height="360"/>
+<img src="https://github.com/Kfollen93/Game-Museum/blob/main/Images/InspectGif.gif" width="640" height="360"/>
 
 You can download the game from my Itch.io page here: <a href="https://kfollen.itch.io/game-museum-inspector">Game Museum Inspector</a>. <br>
 
