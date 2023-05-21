@@ -5,7 +5,7 @@
 You can download the game from my Itch.io page here: <a href="https://kfollen.itch.io/game-museum-inspector">Game Museum Inspector</a>. <br>
 
 
-<i>*This is brief repository containing only the scripts and scriptable objects to be used as a code reference resource. </i> <br>
+<i>*This is a brief repository containing only the scripts and scriptable objects to be used as a code reference resource. </i> <br>
 
 ## Description
 Game Museum Inspector contains exhibits of various game consoles where you can zoom in and inspect the 3d models, along with interacting with the exhibit to learn about the specific console.
